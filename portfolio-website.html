@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Ramesh Chandra Soren, Web Developer specializing in full stack development">
+    <title>Ramesh Chandra Soren - Web Developer Portfolio</title>
+    <style>
+        /* General Reset and Layout */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', 'Roboto', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 30px;
+        }
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: #fff;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .header-content {
+            text-align: left;
+        }
+        .header-content h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .header-content p {
+            font-size: 1.5rem;
+            opacity: 0.9;
+        }
+        .contact-info {
+            text-align: right;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+        .contact-info a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .contact-info a:hover {
+            color: #ffd700;
+        }
+        /* Navigation Styles */
+        nav {
+            background-color: #1a237e;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav .container {
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+            margin: 0 0.5rem;
+            font-size: 1.2rem;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #3949ab;
+        }
+        /* Main Section Styles */
+        section {
+            padding: 3rem 0;
+            background-color: #ffffff;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        h2 {
+            font-size: 2.5rem;
+            color: #1a237e;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: #ffd700;
+            margin: 10px auto;
+        }
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        .project, .education-item {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .project:hover, .education-item:hover {
+            transform: translateY(-5px);
+        }
+        .project h3, .education-item h3 {
+            color: #3949ab;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            justify-content: center;
+        }
+        .skill {
+            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            color: #fff;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            font-size: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .skill:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        /* Footer Styles */
+        footer {
+            background-color: #1a237e;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        .button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Ramesh Chandra Soren</h1>
+                <p>Web Developer | Fresher | Full Stack</p>
+            </div>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:sorenramesh868@gmail.com">sorenramesh868@gmail.com</a></p>
+                <p>Phone: (+91) 8984090285</p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/ramesh-chandra-soren" target="_blank">Ramesh Chandra Soren</a></p>
+                <p>Github: <a href="https://github.com/rameshgitter" target="_blank">github.com/rameshgitter</a></p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I'm Ramesh Chandra Soren, a web developer with a fresh perspective on creating engaging and functional websites.</p>
+            <p>I am currently in my 3rd year of college. I developed a web application for early breast cancer detection by analyzing medical reports and tumor images. Users can upload images and parameters, and the machine learning model provides a cancer risk assessment. Incorporated image denoising feature for accurate analysis. Built with <b>ReactJS, TailwindCSS, Python, and ExpressJS</b>. Combines cutting-edge technologies for a user-friendly cancer detection solution.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills">
+                <span class="skill">C\C++</span>
+                <span class="skill">Python</span>
+                <span class="skill">HTML5</span>
+                <span class="skill">CSS3</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">Responsive Design</span>
+                <span class="skill">Git</span>
+                <span class="skill">React.js</span>
+                <span class="skill">Node.js</span>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Bachelor of Science in Computer Science and Technology</h3>
+                <p>Indian Institute of Engineering Science and Technology, Shibpur, 2022-2026</p>
+                <p><b>Relevant coursework:</b> Data Structures and Algorithms, Data Science, OOPS, Computer Architecture and Organisation</p>
+                <p>CGPA: 7.74 (out of 10 till 4th sem)</p>
+            </div>
+            <div class="education-item">
+                <h3>Open Source Web Development Cohort</h3>
+                <p><b>Instructor:</b> Harkirat Singh</p>
+                <p>Intensive 6-month program focusing on full-stack web development and open source contribution</p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="project">
+                <h3>Gemini AI Chatbot</h3>
+                <p>
+                    - Built a conversational AI chatbot using Gemini and Python Flask.<br>
+                    - Integrated Gemini for advanced conversational abilities.<br>
+                    - Developed a scalable backend using Flask framework.<br>
+                    - Utilized natural language processing (NLP) for understanding user queries and context-aware responses.
+                </p>
+                <a href="https://github.com/rameshgitter/Gemini_bot" target="_blank" class="button">GitHub Repository</a>
+            </div>
+            <div class="project">
+                <h3>4th Semester - Minor Project | Breast Cancer Detection</h3>
+                <p>
+                    - Data Preprocessing: Handled missing data, performed feature scaling, and encoded categorical variables to prepare the dataset for modeling.<br>
+                    - Model Development: Built a logistic regression model to classify tumors as benign or malignant based on various features such as tumor size, age, and other relevant factors. Implemented regularization techniques like Ridge or Lasso to avoid overfitting.<br>
+                    - Model Evaluation: Assessed the model's performance using metrics like accuracy(95.6%), precision(96%), recall(95%), and F1-score(95%) from the confusion matrix. Employed techniques like k-fold cross-validation to ensure robust evaluation and prevent data leakage.<br>
+                    - Deployment: Deployed the trained logistic regression model as a web application or API, allowing users to input new data and receive predictions on the likelihood of cancer.
+                </p>
+                <a href="https://github.com/rameshgitter/4th-Sem-Minor-Project" target="_blank" class="button">GitHub Repository</a>
+            </div>
+            <div class="project">
+                <h3>3rd Semester - Minor Project | Salt Pepper Noise Reduction</h3>
+                <p>
+                    - Implemented two filter functions: Average Filter and Median Filter in Python and C for reducing salt pepper noise from images.<br>
+                    - Utilized OpenCV for basic image operations.<br>
+                    - Developed a web application using HTML, Tailwind CSS, and Django for users to choose filters and kernel sizes to view the processed images.
+                </p>
+                <a href="https://github.com/rameshgitter/3rd-sem-Mini-Project" target="_blank" class="button">GitHub Repository</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Ramesh Chandra Soren. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
