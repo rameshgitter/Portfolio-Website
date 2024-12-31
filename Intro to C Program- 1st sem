@@ -1,0 +1,1081 @@
+Name: Ramesh Chandra Soren 
+Department: Computer Science and Technology
+Roll: 2022CSB086    Group VII
+
+
+ASSIGNMENT-4
+
+//Question 1
+#include<stdio.h>
+int main()
+{
+        int n;
+        printf("enter a number n: ");
+        scanf("%d",&n);
+        if (n==3)
+        printf("2");
+        else
+        printf("2 ");
+        for (int i=2; i<n; i++)
+        {
+                for (int j=2; j<i; j++)
+                {
+                        if (i%j !=0)
+                        printf("%d ",i);
+                        break;
+                }
+        }
+        return 0;
+}
+
+//Question 2-a
+#include<stdio.h>
+int main()
+{
+        int n;
+        printf("enter number n: ");
+        scanf("%d",&n);
+        int sum1=0;
+        for(int i=1; i<=n; i++)
+        {
+                if (i%2 !=0)
+                sum1= sum1+i;
+                else
+                sum1 = sum1+ i*(-1);
+        }
+        printf("%d",sum1);
+        return 0;
+}
+
+//2-b
+#include<stdio.h>
+void main()
+{
+        int n,x;
+        printf("enter number n: ");
+        scanf("%d",&n);
+        printf("enter number x: ");
+        scanf("%d",&x);
+        int sum2=1+x;
+        float y=x*x;
+        for (int i=1; i<n-1; i++)
+        {
+                sum2=sum2+y;
+                y=y*x;
+        }
+        printf("%d",sum2);
+}
+
+//2-c
+#include<stdio.h>
+int main()
+{
+        float n,x;
+        float sum3;
+        printf("Enter numbers of terms n: ");
+        scanf("%f",&n);
+        printf("Enter value of x: ");
+        scanf("%f",&x);
+        sum3=1+x;
+        float y=x*x/2;
+        for (int i=2; i<n; i++)
+        {
+                sum3=sum3+y;
+                y=y*(x/i);
+        }
+        printf("%f",sum3);
+        return 0;
+}
+
+//Question 3
+#include<stdio.h>
+int main()
+{
+        int n;
+        printf("Enter the nth term: ");
+        scanf("%d",&n);
+        int first=0;
+        int second=1;
+        printf("%d ",first);
+        printf("%d ",second);
+        for (int i=2; i<n; i++)
+        {
+                int sum= first+second;
+                printf("%d ",sum);
+                first=second;
+                second=sum;
+        }
+        return 0;
+
+}
+
+//Question 4
+#include<stdio.h>
+int main()
+{
+        int a,b;
+        int op;
+        printf("1.Addition \n2.Subtraction\n3.Multiplication\n4.Division\n");
+        printf("Enter values of a and b: ");
+        scanf("%d %d",&a,&b);
+        printf("Enter your choice: ");
+        scanf("%d",&op);
+        switch(op)
+        {
+                default:
+                        printf("Enter correct choices.");
+                        break;
+                case 1:
+                        printf("addition of %d and %d is %d\n",a,b,a+b);
+                        break;
+                case 2:
+                        printf("subtraction of %d and %d is %d\n",a,b,a-b);
+                        break;
+                case 3:
+                        printf("multiplication of %d and %d is %d\n",a,b,a*b);
+                        break;
+                case 4:
+                        printf("division of %d and %d is %d\n",a,b,a/b);
+                        break;
+        }
+        return 0;
+}
+
+
+
+char c;
+        scanf("%c", &c);
+        printf("ascii of %c = %d\n",c,c);
+
+
+
+ASSIGNMENT-5
+
+//question1-a
+#include<stdio.h>
+void swap(int a, int b)
+{
+        int temp;
+        temp=a;
+        a=b;
+        b=temp;
+        printf("%d %d",a ,b );
+}
+
+int main()
+{
+        int a,b;
+        printf("Enter 1st number: ");
+        scanf("%d",&a);
+        printf("Enter 2nd number: ");
+        scanf("%d",&b);
+        swap(a,b);
+        return 0;
+}
+
+
+//question1-b
+#include<stdio.h>
+void swap(int a, int b)
+{
+        a=a*b;
+        b=a/b;
+        a=a/b;
+        printf("%d %d",a ,b );
+}
+int main()
+{
+        int a,b;
+        printf("Enter 1st number: ");
+        scanf("%d",&a);
+        printf("Enter 2st number: ");
+        scanf("%d",&b);
+        swap(a,b);
+        return 0;
+}
+
+
+//question2
+#include<stdio.h>
+int gcd(int a,int b)
+{
+        int i,GCD;
+        for(i=1; i<=a && i<=b; i++)
+        {
+                if(a%i==0 && b%i==0)
+                        GCD=i;
+        }
+        printf("GCD of %d and %d is %d.\n",a,b,GCD);
+}
+
+int main()
+{
+        int a,b;
+        printf("Enter 1st number: ");
+        scanf("%d",&a);
+        printf("Enter 2nd number: ");
+        scanf("%d",&b);
+        gcd(a,b);
+        return 0;
+}
+
+
+//question3
+#include<stdio.h>
+int factorial(int n)
+{
+        if (n==1)
+                return 1;
+        else
+                return(n*factorial(n-1));
+}
+
+int main()
+{
+        int n,x;
+        printf("Enter a number: ");
+        scanf("%d",&n);
+        x=factorial(n);
+        printf("%d\n",x);
+        return 0;
+}
+
+
+//question4
+#include<stdio.h>
+int factor(int n)
+{
+
+        for (int i=1; i<=n; i++)
+        {
+                if (n%i==0)
+                        printf("%d ",i);
+        }
+}
+
+int main()
+{
+        int n,x;
+        printf("Enter a number: ");
+        scanf("%d",&n);
+        x=factor(n);
+        return 0;
+}
+
+
+//question5-a
+#include<stdio.h>
+int pattern(int r)
+{
+        for(int i=1; i<=r; i++)
+        {
+                for(int j=i; j<=r; j++)
+                {
+                        printf(" ");
+                }
+                for(int k=1; k<=i; k++)
+                {
+                        printf("*");
+                }
+                printf("\n");
+        }
+}
+
+int main()
+{
+        int r;
+        printf("Enter number of rows: ");
+        scanf("%d",&r);
+        pattern(r);
+
+        return 0;
+
+}
+
+
+
+//question5-b
+#include<stdio.h>
+int pattern(int n)
+{
+        int k=1;
+        for(int i=1; i<=n; i++)
+        {
+                for(int j=1; j<=i; j++)
+                {
+                        printf("%d ",k);
+                        k++;
+                }
+                printf("\n");
+
+        }
+
+}
+
+int main()
+{
+        int n;
+        printf("Enter number of rows: ");
+        scanf("%d",&n);
+        pattern(n);
+        return 0;
+}
+
+
+//question5-c
+#include<stdio.h>
+int pattern(int r)
+{
+        char c='A';
+        for(int i=1; i<=r; i++)
+        {
+                for(int j=1; j<=r; j++)
+                {
+                        printf(" ");
+                }
+                for(int k=1;k<=i ; k++)
+                {
+                
+                        printf("%c",c);
+                        c++;
+                }
+                printf("\n");
+        }
+}
+
+int main()
+{
+        int r;
+        printf("Enter number of rows: ");
+        scanf("%d",&r);
+        pattern(r);
+        
+        return 0;
+
+}
+
+ASSIGNMENT 6
+//Question-1
+//part a
+#include<stdio.h>
+int maximum(int a[], int n)
+{
+        int maximum=a[0];
+        for(int i=0; i<n; i++)
+        {
+                if(a[i]>a[i+1] && a[i]>maximum)
+                        maximum=a[i];
+        }
+        printf("maximum of all=%d\n",maximum);
+}
+//part b
+int minimum(int a[], int n)
+{
+        int minimum=a[0];
+        for(int i=0; i<n; i++)
+        {
+                if(a[i]<a[i+1] && a[i]<minimum)
+                        minimum=a[i];
+        }
+        printf("minimum of all=%d\n",minimum);
+}
+// part c
+int average(int a[], int n)
+{
+        int sum=0;
+        for(int i=0; i<n; i++)
+        {
+                sum=sum+a[i];
+        }
+        printf("average of all=%d\n",sum/n);
+}
+
+//part d
+int evensum(int a[], int n)
+{
+        int sum=0;
+        for(int i=0; i<n; i=i+2)
+        {
+                sum=sum+a[i];
+        }
+        printf("sum at even indices=%d\n",sum);
+}
+
+//part e
+int reverse(int a[], int n)
+{
+        for(int i=n-1; i>=0; i--)
+        {
+                printf("%d\n",a[i]);
+        }
+}
+
+int main()
+{
+        int n;
+        printf("enter how many integers: ");
+        scanf("%d",&n);
+        int a[n];
+        for(int i=0; i<n; i++)
+        {
+                printf("enter element: ");
+                scanf("%d",&a[i]);
+
+        }
+        maximum(a,n);
+        minimum(a,n);
+        average(a,n);
+        evensum(a,n);
+        reverse(a,n);
+}
+
+//QUESTION-2
+#include<stdio.h>
+int search(int a[], int n, int k)
+{
+        for(int i=0;i<=n-1;i++)
+        {
+                if(a[i]==k){
+                        printf("the index of the value is %d\n",i);
+                        break;
+                }
+                if(i==n-1){
+                        printf("the item does not exist\n");
+                }
+        }
+}
+int main()
+{
+        int n,k;
+        printf("enter size of your array: ");
+        scanf("%d",&n);
+        int a[n];
+        for(int i=0;i<n;i++){
+                printf("enter element: ");
+                scanf("%d",&a[i]);
+        }
+        printf("enter element to be searched: ");
+        scanf("%d",&k);
+        search(a,n,k);
+}
+
+QUESTION-3
+#include<stdio.h>
+int binary(int n)
+{
+        int a[10],i;
+        for(i=0;n>0;i++){
+                a[i]=n%2;
+                n=n/2;
+        }
+        printf("binary of given number is: ");
+        for(i=i-1; i>=0; i--)
+                printf("%d",a[i]);
+
+}
+int main()
+{
+        int n;
+        printf("enter your decimal number: ");
+        scanf("%d",&n);
+        binary(n);
+}
+
+//QUESTION-4
+#include<stdio.h>
+int sort(int a[], int n)
+{
+        for(int i=0;i<n-1;i++){
+                for(int j=0;j<n-1-i;j++){
+                        if(a[j]>a[j+1])
+                        {
+                                int temp;
+                                temp=a[j];
+                                a[j]=a[j+1];
+                                a[j+1]=temp;
+                        }
+                }
+        }
+        for(int i=0;i<n;i++){
+                printf("%d ",a[i]);
+        }
+}
+int main()
+{
+        int n;
+        printf("enter size of your array: ");
+        scanf("%d",&n);
+        int a[n];
+        for(int i=0;i<n;i++){
+                printf("enter element: ");
+                scanf("%d",&a[i]);
+        }
+        sort(a,n);
+}
+
+ASSIGNMENT 7
+
+//Question 1
+#include<stdio.h>
+#define MAX 50
+int large(int m[MAX][MAX],int r, int c)
+{
+        int max=m[0][0];;
+        for(int i=0; i<r; i++)
+        {
+                for(int j=0; j<c; j++)
+                {
+                        if(max<m[i][j])
+                                max=m[i][j];
+                        else
+                                continue;
+                }
+        }
+        return max;
+
+}
+int main()
+{
+        int r,c;
+        printf("enter number of rows and column respectively: ");
+        scanf("%d %d",&r,&c);
+        int m[MAX][MAX];
+        printf("the matrix is....");
+        for(int i=0; i<r; i++)
+        {
+                for(int j=0; j<c; j++)
+                {
+                        scanf("%d",&m[i][j]);
+                }
+        }
+        printf("largest element is:%d\n",large(m,r,c));
+        return 0;
+}   
+
+//Question2
+#include<stdio.h>
+#define MAX 50
+int array(int m[MAX][MAX], int r, int c)
+{
+        int max,counter=0;
+        int a[c],b[r];
+        while(counter<r){
+                for(int i=0; i<c; i++)
+                {
+                        max=m[counter][0];
+                        if(max<m[i][i+1])
+                                max=m[i][i+1];
+                }
+                a[counter]=max;
+                counter++;
+        }
+        for(int i=0; i<r; i++){
+                printf("%d ",a[i]);
+        }
+        printf("\n");
+}
+int main()
+{
+        int r,c;
+        printf("enter no of rows & column respectively: ");
+        scanf("%d %d",&r,&c);
+        int m[MAX][MAX];
+        printf("Enter elements for matrix\n");
+        for(int i=0; i<r; i++)
+        {
+                for(int j=0; j<c; j++)
+                {
+                        scanf("%d",&m[i][j]);
+                }
+        }
+        array(m,r,c);
+        return 0;
+}
+
+//Question 3
+#include<stdio.h>
+#define MAX 50
+int main()
+{
+        int r,c;
+        printf("enter no of rows & column respectively: ");
+        scanf("%d %d",&r,&c);
+        int a[MAX][MAX], b[MAX][MAX];
+        printf("Enter elements for matrix\n");
+        for(int i=0; i<r; i++)
+        {
+                for(int j=0; j<c; j++)
+                {
+                        scanf("%d",&a[i][j]);
+                        b[j][i]=a[i][j];
+                }
+        }
+        for(int i=0; i<c; i++)
+        {
+                for(int j=0; j<r; j++)
+                {
+                        printf("%d ", b[i][j]);
+
+                }
+                printf("\n");
+        }
+        return 0;
+}
+
+//Question 4
+
+#include<stdio.h>
+#define MAX 50
+int main()
+{
+        int r,c;
+        printf("enter number of rows and column for both matrices respectively: ");
+        scanf("%d %d",&r,&c);
+        int a[MAX][MAX], b[MAX][MAX];
+        printf("Enter elements for matrix A\n");
+        printf("A matrix is....\n");
+        for(int i=0; i<r; i++)
+        {
+                for(int j=0; j<c; j++)
+                {
+                        scanf("%d",&a[i][j]);
+                }
+        }
+        printf("B matrix is...\n");
+        for(int i=0; i<r; i++)
+        {
+                for(int j=0; j<c; j++)
+                {
+                        scanf("%d",&b[i][j]);
+                }
+        }
+        printf("Sum of both matrices is\n");
+        for(int i=0; i<r; i++)
+                {
+                        for(int j=0; j<c; j++)
+                        {
+                                printf("%d ",a[i][j]+b[i][j]);
+                        }
+                        printf("\n");
+                }
+        return 0;
+}
+
+//Question 5
+#include<stdio.h>
+#define MAX 50
+int main()
+{
+        int n;
+        printf("enter n: ");
+        scanf("%d",&n);
+        int a[MAX][MAX];
+        printf("Enter elements for matrix\n");
+        for(int i=0; i<n; i++)
+        {
+                for(int j=0; j<n; j++)
+                {
+                        scanf("%d",&a[i][j]);
+                }
+        }
+        for(int i=0; i<n; i++)
+        {
+                for(int j=0; j<n; j++)
+                {
+                        if(a[i][j]==a[j][i]){
+                                continue;
+                        }
+
+                }
+                printf("The given matrix is symmetric matrix\n");
+                break;
+        }
+        for(int i=0; i<n; i++)
+        {
+                for(int j=0; j<n; j++)
+                {
+                        if(a[i][j]==0 && i<j){
+                                continue;
+                        }
+
+                }
+                printf("The given matrix is lower triangular matrix\n");
+                break;
+        }
+        for(int i=0; i<n; i++)
+        {
+                for(int j=0; j<n; j++)
+                {
+                        if(a[i][j]==0 && i!=j){
+                                continue;
+                        }
+
+                }
+                printf("The given matrix is diagonal matrix\n");
+                break;
+        }
+        return 0;
+}
+
+HOMEWORK
+
+//Question 1
+#include<stdio.h>
+#include<string.h>
+int pal(char *str)
+{
+        int l=strlen(str);
+        for(int i=0; i< l/2; i++)
+        {
+                if(str[i]!=str[l-1-i])
+                {
+                        return 0;
+                        break;
+                }
+                else
+                {
+                        return 1;
+                        break;
+                }
+        }
+}
+int main()
+{
+        char str1[20];
+        printf("Enter your string: ");
+        scanf("%s",str1);
+        int x=pal(str1);
+        printf("%d\n",x);
+}
+
+
+//Question 2
+#include <stdio.h>
+#include <string.h>
+
+char* reverse(char* dest, char* source) {
+    int length = strlen(source);
+    for (int i = 0; i < length; i++) {
+        dest[i] = source[length - i - 1];
+    }
+    dest[length] = '\0';
+    return dest;
+}
+
+int main() {
+    char source[100];
+    char dest[100];
+    printf("Enter a string: ");
+    scanf("%s", source);
+    printf("The reversed string is: %s\n", reverse(dest, source));
+    return 0;
+}
+
+
+//ASSIGNMENT 9
+//Question 1
+#include <stdio.h>
+void reverse(char *str){
+    int i=0,l=0;
+    char rev[50];
+    while(str[i]!='\0'){
+        l=l+i;
+        i++;
+    }
+    printf("length=%d\n",l);
+    for(int j=0; j<l; j++){
+        printf("%c",str[l-j-1]);
+    }
+    
+}
+int main() {
+    char str[50];
+    printf("Enter any string: ");
+    scanf("%s",str);
+    reverse(str);
+    return 0;
+}
+
+//Question 2
+#include <stdio.h>
+int palindrome(char *str){
+    int i=0;
+    while(str[i]!='\0'){
+        i++;
+    }
+    for(int j=0; j<i; j++){
+        if(str[j]!=str[i-j-1])
+        {
+            printf("String is not palindrome");
+            break;
+        }
+        if(str[j]==str[i-j-1])
+        {
+            if(j==i/2){
+                printf("string is palindrome");
+                break;
+            }
+            
+        }
+    }
+}
+
+int main(){
+    char s[40];
+    printf("enter your string: ");
+    scanf("%s",s);
+    palindrome(s);
+    return 0;
+}
+
+//Question 3
+#include<stdio.h>
+void swap(int *a, int *b){
+    int temp;
+    temp= *a;
+    *a = *b;
+    *b= temp;
+}
+int main(){
+    int a,b;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+    swap(&a,&b);
+    printf("%d %d",a,b);
+    return 0;
+}
+
+//Question 4
+#include<stdio.h>
+int add(int *a, int *b){
+    int temp;
+    temp= *a+ *b;
+    return temp;
+}
+int main(){
+    int a,b;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+    int x=add(&a,&b);
+    printf("%d",x);
+    return 0;
+
+//Question 5
+#include <stdio.h>
+#include <string.h>
+#define MAX_STR_LEN 12
+#define NUM_STRINGS 9
+void swap(char **str1, char **str2) {
+    char *temp = *str1;
+    *str1 = *str2;
+    *str2 = temp;
+}
+int main() {
+    char *strings[] = {"PACIFIC", "ATLANTIC", "INDIAN", "CARIBBEAN", "BLACK", "RED", "NORTH", "BALTIC", "CASPIAN"};
+    int i, j;
+    // Sort the strings using bubble sort algorithm
+    for (i = 0; i < NUM_STRINGS - 1; i++) {
+        for (j = 0; j < NUM_STRINGS - i - 1; j++) {
+            if (strcmp(strings[j], strings[j+1]) > 0) {
+                swap(&strings[j], &strings[j+1]);
+            }
+        }
+    }
+    // Print the sorted strings
+    for (i = 0; i < NUM_STRINGS; i++) {
+        printf("%s\n", strings[i]);
+    }
+    return 0;
+}
+
+//LAB TEST PREP
+
+#include <stdio.h>
+int main() {
+    printf("Hello world");
+    FILE *fh_output;
+    fh_output=fopen("io.txt","w");
+    fputs("ramesh is ",fh_output);
+    fputs("a string\n",fh_output);
+    int data=5;
+    fprintf(fh_output,"data: %d\n", data);
+    fclose(fh_output);
+    return 0;
+}
+
+//INTERNAL ASSIGNMENT
+#include<stdio.h>
+int pal(char *str){
+        int len=0;
+        while(*(str+len)!='\0'){
+                len=len+1;
+        }
+        int n=len;
+        for(int i=0; i<=len/2; i++){
+                if(*(str+i) == *(str+len-1-i)){
+                        if(i==len/2)
+                                return 1;
+                }
+                else
+                        return 0;
+        }
+
+}
+int main(){
+        char c[20];
+        printf("enter your string: ");
+        scanf("%s",c);
+        int x=pal(c);
+        printf("%d\n",x);
+}
+1. You don't need to calculate the length of the string manually. You can use the strlen function from the <string.h> library to get the length of a string.
+2. In the for loop, you don't need to check i==len/2. Instead, you can check i<len/2, as you are comparing characters symmetrically from both ends of the string.
+
+
+
+//COMPUTER LAB UNATTEMPTED QUESTION
+#include <stdio.h>
+int compareStrings(char* str1, char* str2);
+int main() {
+    char str1[100], str2[100];
+    printf("Enter the first string: ");
+    scanf("%s",str1);
+    printf("Enter the second string: ");
+    scanf("%s",str2);
+    if (compareStrings(str1, str2))
+        printf("The strings are similar.\n");
+    else 
+        printf("The strings are not similar.\n");
+    return 0;
+}
+int compareStrings(char* str1, char* str2) {
+    int i = 0;
+    while (str1[i] != '\0' && str2[i] != '\0') {
+        if (str1[i] != str2[i]) {
+            return 0;
+        }
+        i++;
+    }
+    if (str1[i] == '\0' && str2[i] =='\0')
+                return 1;
+    else
+        return 0;
+}
+//CHATGPT CORRECTED MY TRIAL SOLUTION
+#include <stdio.h>
+// CHECK STRINGS ARE SAME OR NOT
+void sameString(char *str1, char *str2) {
+    int len1 = 0;
+    int len2 = 0;
+
+    while (*(str1 + len1) != '\0') {
+        len1++;
+    }
+
+    while (*(str2 + len2) != '\0') {
+        len2++;
+    }
+
+    if (len1 != len2) {
+        printf("not same\n");
+        return;
+    }
+
+    for (int i = 0; i < len1; i++) {
+        if (*(str1 + i) != *(str2 + i)) {
+            printf("not same\n");
+            return;
+        }
+    }
+    printf("same\n");
+}
+
+int main() {
+    char str1[20], str2[20];
+    printf("Enter your 1st string: ");
+    scanf("%19s", str1); // Limit the input length to prevent buffer overflow
+    printf("Enter your 2nd string: ");
+    scanf("%19s", str2); // Limit the input length to prevent buffer overflow
+    sameString(str1, str2);
+    return 0;
+}
+
+                                                                                      
+//CASINO GAME
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int cash=100;
+void play(int bet){
+        char c[3]={'J','K','Q'};
+        printf("shuffling....\n");
+        srand(time(NULL));
+        for(int i=0; i<5;i++)
+        {
+                int x=rand() % 3;
+                int y=rand()%3;
+                int temp=c[x];
+                c[x]=c[y];
+                c[y]=temp;
+        }
+        int playerGuess;
+        printf("what is the position of queen- 1,2 or 3? ");
+        scanf("%d",&playerGuess);
+        if(c[playerGuess-1]=='Q'){
+                cash +=3*bet;
+                printf("you win! result= %c %c %c total cash= %d\n",c[0],c[1],c[2],cash);
+        }
+        else{
+                cash-=bet;
+                printf("you loose! result=%c %c %c total cash= %d\n",c[0],c[1],c[2],cash);
+
+        }
+}
+int main() {
+        int bet;
+        printf("welcome to virtual casino\n");
+        printf("total cash=$%d\n",cash);
+        while(cash>0){
+                printf("what is your bet? $ ");
+                scanf("%d",&bet);
+                if(bet ==0 || bet>cash) break;
+                play(bet);
+        }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
