@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contributing to etsi-ai/etna - Step by Step Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .step {
+            background: #f7fafc;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            transition: transform 0.2s;
+        }
+        
+        .step:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+        
+        .step-number {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .step h3 {
+            display: inline-block;
+            color: #2d3748;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+        
+        .step p, .step ul {
+            margin-top: 10px;
+            color: #4a5568;
+        }
+        
+        .step ul {
+            margin-left: 40px;
+        }
+        
+        .step li {
+            margin: 8px 0;
+        }
+        
+        code {
+            background: #2d3748;
+            color: #68d391;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        .code-block {
+            background: #2d3748;
+            color: #68d391;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .warning {
+            background: #fff5f5;
+            border-left: 4px solid #fc8181;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        .warning strong {
+            color: #c53030;
+        }
+        
+        .tip {
+            background: #f0fff4;
+            border-left: 4px solid #68d391;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        .tip strong {
+            color: #276749;
+        }
+        
+        .checklist {
+            background: #edf2f7;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .checklist h4 {
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+        
+        .checklist label {
+            display: block;
+            margin: 10px 0;
+            cursor: pointer;
+            color: #4a5568;
+        }
+        
+        .checklist input[type="checkbox"] {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Contributing to etsi-ai/etna</h1>
+            <p>Your First Open Source Contribution Guide</p>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2>📋 Pre-Contribution Checklist</h2>
+                <div class="checklist">
+                    <h4>Before you start, make sure you have:</h4>
+                    <label><input type="checkbox"> Git installed on your computer</label>
+                    <label><input type="checkbox"> A GitHub account created</label>
+                    <label><input type="checkbox"> Python installed (check with <code>python --version</code>)</label>
+                    <label><input type="checkbox"> Read the project's contributing guidelines</label>
+                    <label><input type="checkbox"> Chosen an issue to work on</label>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🎯 Step-by-Step Contribution Process</h2>
+                
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <h3>Read Contributing Guidelines</h3>
+                    <p>Click on the "contributing guidelines" link shown in the banner on the issues page. This document contains important information about:</p>
+                    <ul>
+                        <li>Code style and standards</li>
+                        <li>Testing requirements</li>
+                        <li>Commit message format</li>
+                        <li>PR (Pull Request) submission process</li>
+                    </ul>
+                    <div class="tip">
+                        <strong>💡 Tip:</strong> Take notes while reading. This will save you time later!
+                    </div>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <h3>Choose an Issue</h3>
+                    <p>Look for issues labeled as:</p>
+                    <ul>
+                        <li><strong>good first issue</strong> - Perfect for beginners</li>
+                        <li><strong>Easy</strong> - Simple to implement</li>
+                        <li><strong>dx</strong> - Developer experience improvements</li>
+                    </ul>
+                    <p>From the screenshot, good options include:</p>
+                    <ul>
+                        <li>#25 - Progress Bar for Training</li>
+                        <li>#24 - Model Summary API</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <h3>Comment on the Issue</h3>
+                    <p>Before starting work, comment on the issue:</p>
+                    <div class="code-block">
+Hi! I'm interested in working on this issue. This would be my first contribution to the project. Could you confirm if it's still available and if there are any specific requirements I should know about?</div>
+                    <div class="warning">
+                        <strong>⚠️ Important:</strong> Always check if someone is already working on the issue. Wait for maintainer confirmation before starting.
+                    </div>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">4</span>
+                    <h3>Fork the Repository</h3>
+                    <p>Click the "Fork" button at the top right of the repository page. This creates your own copy of the project.</p>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">5</span>
+                    <h3>Clone Your Fork</h3>
+                    <p>Open your terminal and run:</p>
+                    <div class="code-block">git clone https://github.com/YOUR-USERNAME/etna.git
+cd etna</div>
+                    <p>Replace YOUR-USERNAME with your GitHub username.</p>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">6</span>
+                    <h3>Set Up Remote Upstream</h3>
+                    <p>Connect your fork to the original repository:</p>
+                    <div class="code-block">git remote add upstream https://github.com/etsi-ai/etna.git
+git remote -v</div>
+                    <p>This allows you to sync with the original project later.</p>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">7</span>
+                    <h3>Create a New Branch</h3>
+                    <p>Never work on the main branch. Create a feature branch:</p>
+                    <div class="code-block">git checkout -b feature/issue-number-short-description</div>
+                    <p>Example: <code>git checkout -b feature/25-progress-bar</code></p>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">8</span>
+                    <h3>Set Up Development Environment</h3>
+                    <p>Install dependencies (usually in requirements or setup files):</p>
+                    <div class="code-block">python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -e .[dev]  # or: pip install -r requirements.txt</div>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">9</span>
+                    <h3>Make Your Changes</h3>
+                    <p>Now write your code! Remember to:</p>
+                    <ul>
+                        <li>Follow the project's code style</li>
+                        <li>Write clear, descriptive variable names</li>
+                        <li>Add comments for complex logic</li>
+                        <li>Keep changes focused on the issue</li>
+                    </ul>
+                    <div class="tip">
+                        <strong>💡 Tip:</strong> Commit frequently with clear messages. It's easier to track your progress!
+                    </div>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">10</span>
+                    <h3>Write Tests</h3>
+                    <p>Most projects require tests for new features:</p>
+                    <ul>
+                        <li>Look for existing test files in the <code>tests/</code> directory</li>
+                        <li>Follow the same pattern for your tests</li>
+                        <li>Run tests locally: <code>pytest</code> or <code>python -m pytest</code></li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">11</span>
+                    <h3>Commit Your Changes</h3>
+                    <p>Stage and commit your changes:</p>
+                    <div class="code-block">git add .
+git commit -m "feat: add progress bar for training (fixes #25)"</div>
+                    <p>Common commit prefixes:</p>
+                    <ul>
+                        <li><code>feat:</code> - New feature</li>
+                        <li><code>fix:</code> - Bug fix</li>
+                        <li><code>docs:</code> - Documentation</li>
+                        <li><code>test:</code> - Tests</li>
+                        <li><code>refactor:</code> - Code refactoring</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">12</span>
+                    <h3>Sync with Upstream</h3>
+                    <p>Before pushing, make sure you're up to date:</p>
+                    <div class="code-block">git fetch upstream
+git rebase upstream/main</div>
+                    <p>Resolve any conflicts if they appear.</p>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">13</span>
+                    <h3>Push to Your Fork</h3>
+                    <div class="code-block">git push origin feature/25-progress-bar</div>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">14</span>
+                    <h3>Create a Pull Request</h3>
+                    <p>Go to your fork on GitHub. You'll see a prompt to create a PR. Click "Compare & pull request".</p>
+                    <p>In your PR description, include:</p>
+                    <ul>
+                        <li>What changes you made</li>
+                        <li>Why you made them</li>
+                        <li>Reference the issue: "Fixes #25"</li>
+                        <li>Screenshots if UI changes</li>
+                        <li>Testing steps you performed</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">15</span>
+                    <h3>Respond to Feedback</h3>
+                    <p>Maintainers may request changes:</p>
+                    <ul>
+                        <li>Be patient and respectful</li>
+                        <li>Ask questions if unclear</li>
+                        <li>Make requested changes in your branch</li>
+                        <li>Push updates (they'll appear in the PR automatically)</li>
+                    </ul>
+                    <div class="tip">
+                        <strong>💡 Tip:</strong> Code reviews are learning opportunities. Don't take feedback personally!
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>⚠️ Common Pitfalls to Avoid</h2>
+                
+                <div class="warning">
+                    <strong>Don't start coding without claiming the issue</strong>
+                    <p>Someone else might be working on it, wasting your time.</p>
+                </div>
+                
+                <div class="warning">
+                    <strong>Don't work on the main branch</strong>
+                    <p>Always create a feature branch for your changes.</p>
+                </div>
+                
+                <div class="warning">
+                    <strong>Don't make massive changes in one PR</strong>
+                    <p>Keep PRs focused on one issue. Smaller PRs are easier to review.</p>
+                </div>
+                
+                <div class="warning">
+                    <strong>Don't ignore CI/CD failures</strong>
+                    <p>If automated tests fail, fix them before requesting review.</p>
+                </div>
+                
+                <div class="warning">
+                    <strong>Don't be discouraged by rejection</strong>
+                    <p>Not all PRs get merged. Learn from feedback and try again!</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🎉 After Your PR is Merged</h2>
+                
+                <div class="tip">
+                    <strong>Congratulations! You're now an open source contributor!</strong>
+                </div>
+                
+                <div class="step">
+                    <h3>Clean up your local repository:</h3>
+                    <div class="code-block">git checkout main
+git pull upstream main
+git branch -d feature/25-progress-bar</div>
+                </div>
+                
+                <div class="step">
+                    <h3>Next steps:</h3>
+                    <ul>
+                        <li>Look for more issues to work on</li>
+                        <li>Help review other people's PRs</li>
+                        <li>Join the project's community chat if available</li>
+                        <li>Share your contribution on social media!</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>📚 Resources</h2>
+                <ul>
+                    <li><strong>Git Documentation:</strong> https://git-scm.com/doc</li>
+                    <li><strong>GitHub Guides:</strong> https://guides.github.com/</li>
+                    <li><strong>First Contributions:</strong> https://firstcontributions.github.io/</li>
+                    <li><strong>Open Source Guide:</strong> https://opensource.guide/</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <p>Good luck with your first contribution! 🚀</p>
+            <p>Remember: Every expert was once a beginner. You've got this! 💪</p>
+        </footer>
+    </div>
+</body>
+</html>
